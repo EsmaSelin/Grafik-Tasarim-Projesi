@@ -1,0 +1,59 @@
+/* src/pages/SearchPage.css */
+
+/* Arama + filtre çubuğu */
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 2rem;
+  padding: 0.75rem;
+  background: #000; /* siyah arkaplan */
+  border-radius: 0.5rem;
+  max-width: 1200px;
+}
+
+/* Ortak input & select stili */
+.search-controls input,
+.search-controls select {
+  flex: 1 1 auto;
+  min-width: 150px;
+  max-width: 300px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+}
+
+/* Placeholder rengi */
+.search-controls input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Açılan seçeneklerin metnini görünür kıl */
+.search-controls select option {
+  color: #000;
+}
+
+/* Ok simgesi kaldırmak istersen, yoksa tarayıcı default’u yeterli */
+.search-controls select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+}
+
+/* Dar ekranlarda alt alta geçiş */
+@media (max-width: 640px) {
+  .search-controls {
+    flex-direction: column;
+  }
+  .search-controls input,
+  .search-controls select {
+    width: 100%;
+    max-width: none;
+  }
+}
